@@ -1,3 +1,4 @@
+import ButtonAtv from "../button-atv"
 import InputAtv from "../input-atv"
 
 function FormAtv() {
@@ -7,10 +8,11 @@ function FormAtv() {
     <hr/>
     <InputAtv type='text' defaultValue='Nome Sobrenome' placeholder='Seu nome aqui'/>
     <p/>
-    <InputAtv type='email' defaultValue='Email@email.com' placeholder='Seu email aqui'/>
+    <InputAtv type='email' defaultValue='email@terra.com' placeholder='Seu email aqui'/>
     <p/>
-    <InputAtv type='text' defaultValue='(00)00000-0000' placeholder='Seu telefone aqui'/>
+    <InputAtv type='text' defaultValue='(00) 00000-0000' placeholder='Seu telefone aqui'/>
     <hr/>
+    <ButtonAtv type='button' label='Fatec: Enviar mensagem'/>
     </>
     )
 }
