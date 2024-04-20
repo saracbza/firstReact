@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
+import Layout from "../../assets/components/layout";
+import ListTask from "../../assets/components/list-task";
+import { Heading } from "@chakra-ui/react";
+
 
 function Task(){
     return (
+        <Layout>
         <>
-            <h1> Lista de Tarefas </h1>
-            <hr />
-            <ul>
-                <li>Tarefa 1</li>
-                <li>Tarefa 2</li>
-                <li>Tarefa 3</li>
-            </ul>
-            <hr />
+        <Heading as='h1' size='lg'>Lista de Tarefas </Heading>
+        <Heading as='h4' size='md'>Inserir nova tarefa</Heading>
+            
+            <ListTask/>
 
             <Link to='/'> Voltar para Página Inicial </Link>
-        </>
-        
+        </> 
+        </Layout>
     )
 }
 export default Task
