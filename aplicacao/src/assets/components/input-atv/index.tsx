@@ -1,14 +1,16 @@
 import './InputAtv.css'
+import { Input } from '@chakra-ui/react'
 
 interface Props {
     defaultValue: string
     placeholder: string
     type: 'text' | 'email' | 'number'
+    className: string
 }
 
-function InputAtv({defaultValue, placeholder, type}: Props) {
+function InputAtv({defaultValue, placeholder, type, className}: Props) {
     return (
-        <input type={type} className='input-text-red' defaultValue={defaultValue} placeholder={placeholder}></input>
+        <Input type={type} className={className} defaultValue={defaultValue} placeholder={placeholder}></Input>
     )
 }
 

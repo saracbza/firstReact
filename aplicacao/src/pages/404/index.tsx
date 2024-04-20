@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
+import {
+    Alert,
+    AlertIcon,
+    AlertTitle,
+    AlertDescription,
+  } from '@chakra-ui/react'
 
 function NotFound(){
     return(
         <>
-            <h1>404</h1>
-            <p>Página não encontrada</p>
+         <Alert status='error'>
+            <AlertIcon />
+            <AlertTitle>404</AlertTitle>
+            <AlertDescription>Página não encontrada.</AlertDescription>
+         </Alert>
             <Link to='/'> Voltar para Página Inicial </Link>
         </>
     )
