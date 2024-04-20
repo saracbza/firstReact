@@ -1,18 +1,33 @@
+import { Center, Heading, Box } from "@chakra-ui/react"
 import ButtonAtv from "../button-atv"
 import InputAtv from "../input-atv"
 
 function FormAtv() {
     return (
     <>
-    <h3> Entre em contato </h3>
+    <Center>
+    <Heading as='h4' size='md' > Entre em contato </Heading>
+    </Center>
     <hr/>
-    <InputAtv type='text' defaultValue='Nome Sobrenome' placeholder='Seu nome aqui'/>
-    <p/>
-    <InputAtv type='email' defaultValue='email@terra.com' placeholder='Seu email aqui'/>
-    <p/>
-    <InputAtv type='text' defaultValue='(00) 00000-0000' placeholder='Seu telefone aqui'/>
+    <Center>
+    <Box maxW='32rem'>
+    <InputAtv className='input-text-red' type='text' defaultValue='' placeholder='Seu nome aqui'/>
+    </Box>
+    </Center>
+    <br/>
+    <Center>
+    <Box maxW='32rem'>
+    <InputAtv className='input-text-red' type='email' defaultValue='' placeholder='Seu email aqui'/>
+    </Box></Center>
+    <br/>
+    <Center>
+    <Box maxW='32rem'>
+    <InputAtv className='input-text-red' type='text' defaultValue='' placeholder='Seu telefone aqui'/>
+    </Box></Center>
     <hr/>
-    <ButtonAtv type='button' label='Fatec: Enviar mensagem'/>
+    <Center>
+    <ButtonAtv color='red' type='button' label='Fatec: Enviar mensagem'/>
+    </Center>
     </>
     )
 }

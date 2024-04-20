@@ -1,13 +1,14 @@
-import './ButtonAtv.css'
+import { Button } from '@chakra-ui/react'
 
 interface Props {
     type: 'button' | 'submit' | 'reset'
     label: string
+    color: string
 }
 
-function ButtonAtv({label, type}: Props) {
+function ButtonAtv({label, type, color}: Props) {
     return (
-        <button className='button-red' type={type}> {label}</button>
+        <Button colorScheme={color} size='lg' type={type}> {label} </Button>
     )
 }
 
