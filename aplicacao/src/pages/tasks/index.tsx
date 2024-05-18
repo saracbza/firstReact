@@ -8,7 +8,7 @@ function Task(){
     return (
         <Layout>
         <>
-        <Heading as='h1' size='lg'>Lista de Tarefas </Heading>
+        <Heading as='h1' size='lg'>LISTA DE TAREFAS </Heading>
         <Heading as='h4' size='md'>Inserir nova tarefa</Heading>
             
             <ListTask/>

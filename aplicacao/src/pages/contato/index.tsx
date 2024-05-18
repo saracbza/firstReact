@@ -7,7 +7,7 @@ function Contato(){
     return (
         <Layout>
         <>
-            <Heading as='h1' size='lg'> Contate-nos </Heading>
+            <Heading as='h1' size='lg'> CONTATE-NOS </Heading>
             <hr />
             <FormAtv/>
             <p/>

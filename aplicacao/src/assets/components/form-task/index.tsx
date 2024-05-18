@@ -17,7 +17,7 @@ function FormTask({loadTasks}: FormTaskProps){
                 title: nameTask,
                 completed: okTask
             }
-            api.post('/task', newTask)
+            api.post('/task', newTask, {withCredentials: true})
             .then (()=> {
                 setNameTask('')
                 loadTasks()

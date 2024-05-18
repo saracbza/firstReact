@@ -8,7 +8,7 @@ function ListTask(){
     const [tasks, setTasks] = useState<Tarefa[]>([])
 
    async function loadTasks(){
-    const resposta = await api.get('/task')
+    const resposta = await api.get('/task', {withCredentials: true})
     if (resposta.status == 200){
         setTasks(resposta.data) //.data ja esta em json
     }
@@ -19,7 +19,7 @@ function ListTask(){
     }, [])
 
     function deleteTask(id: number){
-        api.delete(`/task/${id}`)
+        api.delete(`/task/${id}`, {withCredentials: true})
         .then(()=> {
             loadTasks()
         })
@@ -30,7 +30,7 @@ function ListTask(){
 
     function changeStatus(task: Tarefa){
         task.completed = !task.completed
-        api.put(`/task/${task.id}`, task)
+        api.put(`/task/${task.id}`, task, {withCredentials: true})
         .then(()=> {
             loadTasks()
         })
